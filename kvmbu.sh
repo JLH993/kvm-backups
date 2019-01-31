@@ -10,4 +10,4 @@ BLSHORT=`echo "$BLKLIST" | awk -F'/' '{print$5}'`
 BKUP="/backups/Linux/kvm/"
 
 # Back up powered off images... 
-for i in $BLKLIST; do tar czvf $BKUP$(echo $i | awk -F'/' '{print$5}').tgz $i; done
+for i in $BLKLIST; do tar czvf $BKUP$(echo $i | awk -F'/' '{print$4}').tgz $i; done
